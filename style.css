@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background: #0a0a0a;
+}
+
+/* Background viola animato */
+.bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #0a0a0a, #1a0026, #3a0ca3);
+    background-size: 300% 300%;
+    animation: moveBg 12s ease infinite;
+    z-index: -2;
+}
+
+@keyframes moveBg {
+    0% {background-position: 0%}
+    50% {background-position: 100%}
+    100% {background-position: 0%}
+}
+
+/* Glass scuro */
+.glass {
+    background: rgba(20, 20, 20, 0.6);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    border: 1px solid rgba(138, 43, 226, 0.3);
+}
+
+/* NAVBAR sopra tutto */
+.navbar {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    z-index: 1000; 
+}
+
+/* Link navbar */
+.navbar a {
+    color: #c77dff;
+    text-decoration: none;
+    transition: 0.3s;
+    backdrop-filter: blur(20px);
+    background: rgba(10, 10, 10, 0.7);
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.3);
+}
+
+.navbar a:hover {
+    color: #ffffff;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* effetto sotto navbar */
+    padding-top: 120px;
+}
+
+/* CARD */
+.card {
+    padding: 40px;
+    text-align: center;
+    max-width: 400px;
+    box-shadow: 0 0 40px rgba(138, 43, 226, 0.2);
+}
+
+/* SEZIONI */
+.section {
+    display: flex;
+    justify-content: center;
+    padding: 120px 20px;
+}
+
+/* IMPORTANTE: niente margine sopra */
+.section:first-of-type {
+    margin-top: 0;
+}
+
+/* Bottone */
+button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    background: rgba(138, 43, 226, 0.3);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #8a2be2;
+}
